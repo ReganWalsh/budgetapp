@@ -1,0 +1,258 @@
+/** All Associated Elements **/
+* { /** All Elements **/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+body {
+    color: #555;
+    font-family: 'Lato', serif;
+    font-size: 15px;
+    position: relative;
+    height: 100vh; /** Height Is 100% Of Window **/
+    font-weight: 400;
+}
+
+.right { float: right; } /** Float Income/Expense Values And Percentages To Right **/
+.red { color: #CC0605 !important; }
+.red-focus:focus { border: 1px solid #CC0605 !important; }
+
+/** Top Part Of Application **/
+.top {
+    height: 40vh;
+    background-image: linear-gradient(rgba(13, 13, 13, 0.4), rgba(115, 115, 115, 0.4)), url(assets/back.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.budget { /** All Values In Top Half Of Application **/
+    position: absolute;
+    width: 350px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #FFFFFF;
+}
+
+.budget__title { /** Available Budget In ....... **/
+    font-size: 26px;
+    text-align: center;
+    margin-bottom: 10px;
+    font-weight: 300;
+}
+
+.budget__value { /** Total Available Budget Value **/
+    font-weight: 300;
+    font-size: 46px;
+    text-align: center;
+    margin-bottom: 25px;
+    letter-spacing: 2px;
+}
+
+.budget__income, /** Both Green And Red Bars And Values Within **/
+.budget__expenses {
+    padding: 12px;
+    text-transform: uppercase;
+}
+
+.budget__income { /** Green Bar **/
+    margin-bottom: 10px;
+    background-color: #33A532;
+}
+
+.budget__expenses { /** Red Bar **/
+    background-color: #CC0605;
+}
+
+.budget__income--text, /** Text In Bars **/
+.budget__expenses--text {
+    float: left;
+    font-size: 16px;
+    color: #FFFFFF;
+    margin-top: 2px;
+}
+
+.budget__income--value, /** Values In Bars **/
+.budget__expenses--value {
+    letter-spacing: 1px;
+    float: left;
+    font-size: 16px;
+}
+
+.budget__income--percentage, /** Percentages in Bars **/
+.budget__expenses--percentage {
+    float: left;
+    width: 34px;
+    font-size: 13px;
+    padding: 3px 0;
+    margin-left: 10px;
+}
+
+.budget__expenses--percentage { /** Percent Of Expenses Within Income Values **/
+    background-color: rgba(255, 255, 255, 0.2);
+    text-align: center;
+    border-radius: 3px;
+}
+
+/** Botton Part Of Application **/
+/** Form **/
+.add { /** Total Bottom Of Application **/
+    padding: 14px;
+    border-bottom: 1px solid #FFFFFF;
+    background-color: #FFFFFF;
+}
+
+.add__container {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.add__type { /* +/- Value */
+    width: 55px;
+    border: 1px solid #A9A9A9;
+    height: 44px;
+    font-size: 18px;
+    color: inherit; /* Inherits Color From Parent Element */
+    background-color: #F5F5F5;
+    margin-right: 10px;
+    font-weight: 300;
+    transition: border 0.3s;
+}
+
+.add__description, /* Description And Value Associated With Income/Expense */
+.add__value {
+    border: 1px solid #A9A9A9;
+    background-color: #F5F5F5;
+    color: inherit;
+    font-family: inherit;
+    font-size: 14px;
+    padding: 12px 15px;
+    margin-right: 10px;
+    border-radius: 5px;
+    transition: border 0.3s;
+}
+
+.add__description { width: 400px;}
+.add__value { width: 100px;}
+
+.add__btn { /* Button To Add Income/Expense */
+    font-size: 35px;
+    background: none;
+    border: none;
+    color: #33A532;
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 1.1;
+    margin-left: 10px;
+}
+
+.add__btn:active { transform: translateY(2px); } /* Creates Click Effect When Pressing Button */
+
+.add__type:focus,
+.add__description:focus,
+.add__value:focus { /* For When Clicked Inside Particular Box */
+    outline: none;
+    border: 1px solid #33A532;
+}
+
+.add__btn:focus { outline: none; } /* No Focus When Button Clicked */
+
+/** Value Lists **/
+.container {
+    width: 1000px;
+    margin: 60px auto;
+}
+
+.income { /** Income Column **/
+    float: left;
+    width: 475px;
+    margin-right: 50px;
+}
+
+.expenses { /** Expense Column **/
+    float: left;
+    width: 475px;
+}
+
+h2 { /** Column Attributes **/
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+
+.income__title { color: #33A532; }
+.expenses__title { color: #CC0605; }
+
+.item { /** Per Each Item **/
+    padding: 13px;
+    border-bottom: 1px solid #e7e7e7;
+}
+
+.item:first-child { border-top: 1px solid #e7e7e7; } /** First Item **/
+.item:nth-child(even) { background-color: #f7f7f7; } /** Each Other Item **/
+
+.item__description { /** Description For Item **/
+    float: left;
+}
+
+.item__value { /** Value For Item **/
+    float: left;
+    transition: transform 0.3s;
+}
+
+.item__percentage { /** Percentage For Expenses **/
+    float: left;
+    margin-left: 20px;
+    transition: transform 0.3s;
+    font-size: 11px;
+    background-color: #FFDAD9;
+    padding: 3px;
+    border-radius: 3px;
+    width: 32px;
+    text-align: center;
+}
+
+.income .item__value,
+.income .item__delete--btn { /** Income Value And Remove Button **/
+    color: #33A532;
+}
+
+.expenses .item__value,
+.expenses .item__percentage,
+.expenses .item__delete--btn { /** Expense Value And Remove Button **/
+    color: #CC0605;
+}
+
+
+.item__delete {
+    float: left;
+}
+
+.item__delete--btn {
+    font-size: 22px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 1;
+    display: none;
+}
+
+.item__delete--btn:focus { outline: none; }
+.item__delete--btn:active { transform: translateY(2px); } /** Click Effect For Item Delete Button **/
+
+.item:hover .item__delete--btn { display: block; } /** When Hovering Over Item, Show Delete Button **/
+.item:hover .item__value { transform: translateX(-20px); } /** When Hovering Item, Move Value And Percentage To Make Room For Delete Button **/
+.item:hover .item__percentage { transform: translateX(-20px); }
+
