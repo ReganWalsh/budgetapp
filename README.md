@@ -1,6 +1,6 @@
-![forthebadge](https://img.shields.io/badge/made%20with-JavaScript-red.svg?style=for-the-badge&logo=JavaScript&logoColor=white)
-![forthebadge](https://img.shields.io/badge/made%20with-HTML5-red.svg?style=for-the-badge&logo=HTML5&logoColor=white)
-![forthebadge](https://img.shields.io/badge/made%20with-CSS3-red.svg?style=for-the-badge&logo=CSS3&logoColor=white)<br>
+![forthebadge](https://img.shields.io/badge/made%20with-JavaScript-F7DF1E.svg?style=for-the-badge&logo=JavaScript&logoColor=white)
+![forthebadge](https://img.shields.io/badge/made%20with-HTML5-E34F26.svg?style=for-the-badge&logo=HTML5&logoColor=white)
+![forthebadge](https://img.shields.io/badge/made%20with-CSS3-1572B6.svg?style=for-the-badge&logo=CSS3&logoColor=white)<br>
 
 # *Budgeting Application*
 A simple budgeting application that takes the users incomes and expenses and displays them visually. Other features include the user being able to see the percentages of each expense in relation to their overall income.
